@@ -30,7 +30,7 @@ def setup_browser(request):
 @pytest.fixture()
 def is_mobile(setup_browser):
     width = setup_browser
-    return width < 1011
+    return width <= 1011
 
 
 def test_github_desktop(setup_browser, is_mobile):
